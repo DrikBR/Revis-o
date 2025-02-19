@@ -1,0 +1,38 @@
+create database biblioteca;
+use biblioteca;
+
+create table TB_Editora (
+cod_editora int primary key,
+descricao varchar(30),
+endereço varchar(30)
+);
+
+create table TB_Autor (
+Cod_autor int primary key,
+nome varchar(45),
+sexo character,
+data_nascimento date
+);
+
+create table TB_Livro (
+cod_livro int primary key,
+ISBN varchar(20),
+titulo varchar(45),
+num_edicao int,
+preco float,
+cod_editora int,
+foreign key (cod_editora) references TB_Editora (cod_editora)
+on update cascade
+);
+
+create table TB_Livro_Autor (
+cod_livro int,
+foreign key (cod_livro) references TB_Livro (cod_livro)
+on update cascade,
+
+cod_autor int,
+foreign key (cod_autor) references TB_Autor (cod_autor)
+on update cascade,
+
+primary key (cod_livro, cod_autor)
+);

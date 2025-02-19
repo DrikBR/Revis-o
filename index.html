@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="título">
+        <h1>Somatório</h1>
+        <hr>
+        </div>
+        <form action="javascript:;" onsubmit="calcularsoma()"> <!-- ativa o javascript no submit -->
+          
+            <label for="num1">Primeiro número:</label>
+            <br>
+            <input type="number" name="num1" id="num1" placeholder="EX: 8" required>
+            <br>
+            <br>
+            <label for="num2">Segundo número:</label>
+            <br>
+            <input type="number" name="num2" id="num2" placeholder="EX: 15" required>
+            <br>
+            <hr>
+            <input type="checkbox" name="marcar" id="marcado">
+            <label for="marcar">Manter os números</label>
+            <hr>
+            <input type="radio" name="esse" id="feliz">
+            <label for="feliz">Ser feliz</label>
+            <input type="radio" name="esse" id="java">
+            <label for="java">Estudar java</label>
+            <hr>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="resultado"></p>
+        <footer>
+            <p>Direitos autorais</p>
+        </footer>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
